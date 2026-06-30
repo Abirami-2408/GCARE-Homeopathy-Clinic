@@ -1,0 +1,53 @@
+# ==========================================
+# CodeIgniter / PHP
+# ==========================================
+
+# Database config (contains your password — never upload this)
+application/config/database.php
+
+# CodeIgniter logs
+application/logs/*.php
+!application/logs/index.html
+
+# CodeIgniter cache
+application/cache/*
+!application/cache/index.html
+
+# ==========================================
+# Uploaded Images (user content)
+# ==========================================
+
+# Don't upload actual image files
+assets/uploads/sliders/*
+assets/uploads/services/*
+assets/uploads/reviews/*
+
+# But KEEP the empty folders on GitHub
+!assets/uploads/sliders/.gitkeep
+!assets/uploads/services/.gitkeep
+!assets/uploads/reviews/.gitkeep
+
+# ==========================================
+# System / OS Files
+# ==========================================
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Mac
+.DS_Store
+
+# ==========================================
+# IDE / Editor Files
+# ==========================================
+
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ==========================================
+# XAMPP specific
+# ==========================================
+*.log
