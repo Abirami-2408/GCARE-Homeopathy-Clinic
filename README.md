@@ -1,36 +1,82 @@
-# 🏥 GCare Homeopathy Clinic Management System
+# 🌿 GCare Homeopathy — CMS Web Application
 
-A full-stack web application developed during an internship to manage a homeopathy clinic. The project includes a responsive user website and an admin panel for managing website content.
+A full-stack Clinical Management System (CMS) built for a 
+homeopathy clinic using PHP and CodeIgniter 3. It includes 
+a public-facing homepage and a secure admin panel to manage 
+sliders, services, and patient reviews.
 
-## 📌 Features
+---
 
-### User Website
-- 🏠 Responsive Home Page
-- 🎞️ Dynamic Hero Slider
-- 💊 Services Section
-- ⭐ Patient Reviews
-- 📞 Contact Section
-- 📅 Book Appointment
-- 💬 Floating WhatsApp Button
+## 🌐 Live Demo
 
-### Admin Panel
-- 🔐 Secure Admin Login
-- 🖼️ Add / Edit / Delete Slider
-- 💊 Add / Edit / Delete Services
-- ⭐ Add / Edit / Delete Reviews
-- 📊 Dashboard
-- 💾 MySQL Database Integration
+ 🔗 **Website:** https://gcarewebsite.42web.io
+
+ 🔐 **Admin Panel:** https://gcarewebsite.42web.io/auth/login
+
+
+### Demo Admin Credentials (For Evaluation Only)
+
+- **Username:** `admin`
+- **Password:** `password123`
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+
+![Home Page](screenshots/homepage.png)
+
+### 🔐 Admin Login
+
+![Admin Login](screenshots/admin-login.png)
+ 
+### Admin Dashboard
+
+![Dashboard](screenshots/dashboard.png)
 
 ## 🛠️ Tech Stack
 
-- HTML5
-- CSS3
-- Bootstrap
-- JavaScript
-- PHP
-- CodeIgniter 3
-- MySQL
-- XAMPP
+| Layer      | Technology                        |
+|------------|-----------------------------------|
+| Language   | PHP 7.4+                          |
+| Framework  | CodeIgniter 3                     |
+| Database   | MySQL                             |
+| Frontend   | Bootstrap 4, jQuery, Font Awesome |
+| Server     | Apache (XAMPP local / InfinityFree live) |
+| Version Control | Git & GitHub                 |
+
+---
+
+## ✨ Features
+
+### Public Frontend
+- 🖼️ Dynamic image slider (carousel) with title and subtitle
+- 🏥 Services section with icon and image cards
+- ⭐ Patient reviews with star rating display
+- 💬 Floating WhatsApp button for quick appointment booking
+- 📱 Fully responsive design for mobile and desktop
+- 🔽 Smooth scroll navigation
+
+### Admin Panel
+- 🔐 Secure login with session-based authentication
+- 📊 Dashboard with active counts for sliders, services, reviews
+- ➕ Add / ✏️ Edit / 🗑️ Delete Sliders with image upload
+- ➕ Add / ✏️ Edit / 🗑️ Delete Services with icon and image
+- ➕ Add / ✏️ Edit / 🗑️ Delete Reviews with optional photo
+- 🔄 Active/Inactive status toggle for all content
+
+---
+
+## 🗄️ Database Tables
+
+| Table      | Columns                                              |
+|------------|------------------------------------------------------|
+| slider     | id, title, subtitle, image, status, created_at       |
+| service    | id, name, description, icon, image, status, created_at |
+| review     | id, patient_name, review, rating, photo, status, created_at |
+| ci_sessions| id, ip_address, timestamp, data                      |
+
+---
+
 
 
 ## 🚀 Installation
@@ -38,7 +84,7 @@ A full-stack web application developed during an internship to manage a homeopat
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/YourUsername/GCare-Homeopathy-Clinic.git
+git clone https://github.com/Abirami-2408/GCare-Homeopathy-Clinic.git
 ```
 
 ### Import Database
@@ -48,38 +94,40 @@ git clone https://github.com/YourUsername/GCare-Homeopathy-Clinic.git
 - Import the provided SQL file
 
 
-## 🌐 Live Demo
 
-Coming Soon
-
----
 
 ## 📂 Project Structure
 
 ```
-gcare/
-├── application/
-│   ├── controllers/
-│   │   ├── Home.php          ← Frontend
-│   │   └── Admin.php         ← Admin panel
-│   ├── models/
-│   │   ├── Slider_model.php
-│   │   ├── Service_model.php
-│   │   └── Review_model.php
-│   ├── views/
-│   │   ├── frontend/
-│   │   │   └── home.php
-│   │   └── admin/
-│   │       ├── dashboard.php
-│   │       ├── slider/
-│   │       ├── service/
-│   │       └── review/
+MyProject/
+├── .htaccess                    ← URL rewriting (removes index.php)
+├── index.php                    ← CodeIgniter front controller
 ├── assets/
-│   ├── uploads/sliders/
-│   ├── uploads/services/
-│   └── css/, js/
-```
+│   └── uploads/
+│       ├── sliders/             ← Slider images stored here
+│       ├── services/            ← Service images stored here
+│       └── reviews/             ← Review photos stored here
+└── application/
+├── controllers/
+│   ├── Home.php             ← Public frontend
+│   ├── Admin.php            ← Admin CRUD operations
+│   └── Auth.php             ← Login / Logout
+├── models/
+│   ├── Slider_model.php
+│   ├── Service_model.php
+│   └── Review_model.php
+└── views/
+├── frontend/
+│   └── home.php         ← Public homepage
+├── admin/
+│   ├── dashboard.php
+│   ├── slider/
+│   ├── service/
+│   └── review/
+└── auth/
+└── login.php
 
+```
 ---
 
 ## 🎯 Internship Project
