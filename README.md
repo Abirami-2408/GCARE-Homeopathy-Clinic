@@ -99,33 +99,43 @@ git clone https://github.com/Abirami-2408/GCare-Homeopathy-Clinic.git
 ## 📂 Project Structure
 
 ```
-MyProject/
-├── .htaccess                    ← URL rewriting (removes index.php)
-├── index.php                    ← CodeIgniter front controller
-├── assets/
-│   └── uploads/
-│       ├── sliders/             ← Slider images stored here
-│       ├── services/            ← Service images stored here
-│       └── reviews/             ← Review photos stored here
-└── application/
+application/
 ├── controllers/
-│   ├── Home.php             ← Public frontend
-│   ├── Admin.php            ← Admin CRUD operations
-│   └── Auth.php             ← Login / Logout
+│   ├── Home.php
+│   ├── Admin.php
+│   ├── Auth.php
+│   └── Appointment.php
 ├── models/
 │   ├── Slider_model.php
 │   ├── Service_model.php
-│   └── Review_model.php
+│   ├── Review_model.php
+│   └── Appointment_model.php
 └── views/
-├── frontend/
-│   └── home.php         ← Public homepage
-├── admin/
-│   ├── dashboard.php
-│   ├── slider/
-│   ├── service/
-│   └── review/
-└── auth/
-└── login.php
+    ├── frontend/                      ← sibling of admin/, NOT inside it
+    │     ├── home.php
+    │     └── book_appointment.php
+    ├── admin/
+    │     ├── dashboard.php
+    │     ├── layouts/
+    │     │     ├── header.php
+    │     │     └── footer.php
+    │     ├── slider/
+    │     │     ├── add.php
+    │     │     ├── edit.php
+    │     │     └── manage.php
+    │     ├── service/
+    │     │     ├── add.php
+    │     │     ├── edit.php
+    │     │     └── manage.php
+    │     ├── review/
+    │     │     ├── add.php
+    │     │     ├── edit.php
+    │     │     └── manage.php
+    │     └── appointment/               ← THIS IS MISSING
+    │           └── manage.php
+    ├── auth/
+    │     └── login.php
+    └── errors/
 
 ```
 ---
