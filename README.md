@@ -120,7 +120,7 @@ application/
 │   ├── Review_model.php
 │   └── Appointment_model.php
 └── views/
-    ├── frontend/                      ← sibling of admin/, NOT inside it
+    ├── frontend/                      
     │     ├── home.php
     │     └── book_appointment.php
     ├── admin/
@@ -140,7 +140,7 @@ application/
     │     │     ├── add.php
     │     │     ├── edit.php
     │     │     └── manage.php
-    │     └── appointment/               ← THIS IS MISSING
+    │     └── appointment/              
     │           └── manage.php
     ├── auth/
     │     └── login.php
