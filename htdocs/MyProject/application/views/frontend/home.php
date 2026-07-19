@@ -614,7 +614,7 @@
         <div style="background:#fff;border-radius:14px;padding:30px;box-shadow:0 3px 12px rgba(0,0,0,.06)">
           <i class="fas fa-phone-alt fa-2x mb-3" style="color:var(--green-mid)"></i>
           <h6 style="font-weight:700;color:#1a5c3a">Phone</h6>
-          <p style="color:#555">+91 98765 43210</p>
+          <p style="color:#555">+91 8667023353</p>
         </div>
       </div>
       <div class="col-md-4 text-center mb-4">
