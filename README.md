@@ -38,6 +38,7 @@ sliders, services, and patient reviews.
 
 ##Manage_Appointment page
 ![Appointment](screenshots/Manageappointments.png.png)
+
 ## 🛠️ Tech Stack
 
 | Layer      | Technology                        |
@@ -71,14 +72,17 @@ sliders, services, and patient reviews.
 
 ---
 
+
 ## 🗄️ Database Tables
 
-| Table      | Columns                                              |
-|------------|------------------------------------------------------|
-| slider     | id, title, subtitle, image, status, created_at       |
-| service    | id, name, description, icon, image, status, created_at |
-| review     | id, patient_name, review, rating, photo, status, created_at |
-| ci_sessions| id, ip_address, timestamp, data                      |
+| Table | Columns |
+|--------|---------|
+| slider | id, title, subtitle, image, status, created_at |
+| service | id, name, description, icon, image, status, created_at |
+| review | id, patient_name, review, rating, photo, status, created_at |
+| appointments | id, name, phone, email, preferred_date, message, status, created_at |
+| ci_sessions | id, ip_address, timestamp, data |
+                   
 
 ---
 
@@ -153,13 +157,13 @@ This project was developed as part of a Full Stack Web Development Internship to
 
 ## 📈 Future Improvements
 
-- Appointment Management
-- Email Notifications
-- Search & Filter
-- Pagination
+- Email Notifications for Appointment Confirmation
+- Appointment Search & Filter
+- Pagination for Admin Tables
 - Better Authentication
 - Password Hashing
 - Admin Profile Management
+- Appointment Calendar View
 
 ---
 
