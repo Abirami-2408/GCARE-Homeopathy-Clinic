@@ -8,9 +8,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
     'hostname' => 'localhost',
-    'username' => 'YOUR_DB_USERNAME',
-    'password' => 'YOUR_DB_PASSWORD',
-    'database' => 'YOUR_DB_NAME',
+    'username' => 'root',
+    'password' => '',
+    'database' => 'gcare',
     'dbdriver' => 'mysqli',
     'dbprefix' => '',
     'pconnect' => FALSE,

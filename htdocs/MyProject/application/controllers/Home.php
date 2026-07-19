@@ -15,7 +15,7 @@ class Home extends CI_Controller {
         // Only fetch active (status=1) records for frontend
         $data['sliders']  = $this->Slider_model->get_active();
         $data['services'] = $this->Service_model->get_active();
-        $data['reviews']  = $this->Review_model->get_active();
+        $data['reviews']  = $this->Review_model->get_active(); 
         $this->load->view('frontend/home', $data);
     }
 }

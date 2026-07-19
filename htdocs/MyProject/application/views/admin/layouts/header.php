@@ -6,6 +6,7 @@
   <title><?= isset($page_title) ? $page_title . ' — GCare Admin' : 'GCare Admin' ?></title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
   <style>
     :root {
       --green-dark:  #1a5c3a;
@@ -275,6 +276,7 @@
        class="<?= $this->uri->segment(2) == 'dashboard' ? 'active' : '' ?>">
       <i class="fas fa-tachometer-alt"></i> Dashboard
     </a>
+    <li><a href="<?= base_url('admin/manage_appointment') ?>"><i class="fa fa-calendar-check"></i> Manage Appointments</a></li>
   </nav>
 
   <div class="nav-section-label">Slider</div>
@@ -311,6 +313,7 @@
        class="<?= $this->uri->segment(2) == 'manage_review' ? 'active' : '' ?>">
       <i class="fas fa-star"></i> Manage Reviews
     </a>
+    
   </nav>
 
   <div class="sidebar-footer">

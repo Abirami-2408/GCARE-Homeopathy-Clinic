@@ -18,7 +18,7 @@
 }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', sans-serif; color: #333;
+    body { font-family: 'Segoe UI', sans-serif; color: #181717fb;
   font-size: 1rem; /* Adapts cleanly to 16px */
   line-height: 1.6;
  }
@@ -63,6 +63,7 @@
       width: 100%;
       height: 520px;
       object-fit: cover;
+      display:block;
       filter: brightness(0.55);
     }
 
@@ -398,7 +399,7 @@
         <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         <li class="nav-item ml-2">
-          <a class="nav-link btn-appt" href="#contact">Book Appointment</a>
+         <a href="<?= base_url('appointment') ?>" class="btn btn-success">Book Appointment</a> 
         </li>
       </ul>
     </div>

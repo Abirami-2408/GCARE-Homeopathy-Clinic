@@ -19,6 +19,7 @@ class Admin extends CI_Controller {
     $this->load->model('Review_model');
     $this->load->library(['form_validation']);
     $this->load->helper(['url', 'form']);
+    $this->load->model('Appointment_model');
 }
     public function dashboard() {
     // Count totals for dashboard cards
@@ -394,6 +395,28 @@ public function index() {
         }
         redirect('admin/manage_review');
     }
+    // =========================================================
+    // APPOINTMENT  (DB: id, name, phone, email, preferred_date, message, status, created_at)
+    // =========================================================
+
+    public function manage_appointment() {
+        $data['appointments'] = $this->Appointment_model->get_all_appointments();
+        $this->load->view('admin/layouts/header');
+        $this->load->view('admin/appointment/manage', $data);
+        $this->load->view('admin/layouts/footer');
+    }
+
+    public function update_appointment_status($id, $status) {
+        $this->Appointment_model->update_status($id, $status);
+        $this->session->set_flashdata('success', 'Appointment status updated.');
+        redirect('admin/manage_appointment');
+    }
+
+    public function delete_appointment($id) {
+        $this->Appointment_model->delete_appointment($id);
+        $this->session->set_flashdata('success', 'Appointment deleted.');
+        redirect('admin/manage_appointment');
+    }
     public function login() {
     // If user is already logged in, send them straight to the dashboard
     if ($this->session->userdata('logged_in')) {
@@ -408,7 +431,7 @@ public function index() {
         // Replace 'admin' and 'password123' with your actual validation logic/DB check
         if ($username === 'admin' && $password === 'password123') {
             $this->session->set_userdata('logged_in', TRUE);
-            redirect('admin/dashboard');
+            redirect('admin/dashboard' );
         } else {
             $this->session->set_flashdata('error', 'Invalid username or password.');
             redirect('admin/login');
