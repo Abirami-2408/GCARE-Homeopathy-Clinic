@@ -34,8 +34,10 @@ sliders, services, and patient reviews.
 ![Dashboard](screenshots/dashboard.png)
 
 ##Appointment page
-![Appointment](screenshots/appointment.png)
+![Appointment](screenshots/appointment.png.png)
 
+##Manage_Appointment page
+![Appointment](screenshots/Manageappointments.png.png)
 ## 🛠️ Tech Stack
 
 | Layer      | Technology                        |
